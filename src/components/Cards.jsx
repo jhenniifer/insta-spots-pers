@@ -1,15 +1,4 @@
-import { useState, useEffect } from "react";
-import { cardDetails } from "./data";
-
-function Cards() {
-  const [cards, setCards] = useState(() => {
-    const stored = localStorage.getItem("cardDetails");
-    return stored ? JSON.parse(stored) : cardDetails;
-  });
-  useEffect(() => {
-    localStorage.setItem("cardDetails", JSON.stringify(cards));
-  }, [cards]);
-
+function Cards({ cards, setCards }) {
   const handleLike = (name) => {
     setCards((prev) =>
       prev.map((card) =>
