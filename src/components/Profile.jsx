@@ -1,33 +1,28 @@
 function Profile() {
   return (
-    <section
-      className="flex flex-col items-center text-center py-5 lg:mx-15"
-      aria-label="Hero Left Section"
-    >
-      <img
-        src="/assets/Avatar.png"
-        alt="Profile picture of person"
-        className="w-40 mx-auto"
-      />
-      <div className="hero__profile" aria-label="Hero Profile Section">
-        <section className="hero__profile--top flex flex-col items-center">
-          <h2 className="text-xl font-semibold lg:text-3xl">Bessie Coleman</h2>
-          <h3 className="text-[#212121B2] font-semibold">Civil Aviator</h3>
-        </section>
-        <div className="mt-5">
-          <button
-            className="flex align-center gap-2"
-            aria-label="Edit Profile Button"
-          >
-            <img src="/assets/Group 2.svg" alt="Edit Profile Icon" />
+    <section className="hero ">
+      <div className="hero__left">
+        <img
+          src="/assets/Avatar.png"
+          alt="Profile picture of person"
+          className="hero__img"
+        />
+        <div className="hero__profile">
+          <section className="hero__profile--top">
+            <h2 className="hero__name">Bessie Coleman</h2>
+            <h3 className="hero__bio">Civil Aviator</h3>
+          </section>
+
+          <button className="hero__edit">
+            <i className="fa-solid fa-pen"></i>
             Edit Profile
-          </button>
-          <button>
-            <i class="fa-solid fa-plus"></i>
-            New Post
           </button>
         </div>
       </div>
+      <button className="new__post">
+        <i className="fa-solid fa-plus"></i>
+        New Post
+      </button>
     </section>
   );
 }
